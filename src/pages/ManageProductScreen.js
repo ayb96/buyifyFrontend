@@ -6,7 +6,6 @@ import { deleteProduct } from "../redux/actions/productActions";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { URL } from "../apis/BackendConfig";
 
-
 const ManageProductScreen = () => {
   const { allSearch } = useSelector((state) => state.InfiniteScrollPrduct);
 
@@ -16,29 +15,26 @@ const ManageProductScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-
-
   useEffect(() => {
     const getArticles = async () => {
       const res = await fetch(
         `${URL}/api/product?page=1&limit=20&allsearch=${allSearch}`
       );
       const data = await res.json();
-     
+
       setItems(data.results);
     };
     getArticles();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     const getArticles = async () => {
-      
       const res = await fetch(
         `${URL}/api/product?page=1&limit=20&allsearch=${allSearch}`
       );
       const data = await res.json();
-    
+
       setItems(data.results);
     };
     getArticles();
@@ -75,7 +71,6 @@ const ManageProductScreen = () => {
       className="main_content"
       style={{ backgroundColor: "#272b34", width: "100vw" }}
     >
-
       <>
         <InfiniteScroll
           className="main_content"
@@ -92,18 +87,12 @@ const ManageProductScreen = () => {
           {items &&
             items.map((product) => {
               return (
-                <div
-                  key={product._id}
-                  className="card"
-
-                >
+                <div key={product._id} className="card">
                   <div className="card_img">
                     <img src={product.image} alt={product.name} />
                   </div>
                   <div className="card_header">
                     <h2>{product.name}</h2>
-
-    
 
                     <p className="price">${product.price}</p>
                     <div style={{ display: "flex" }}>
@@ -130,7 +119,6 @@ const ManageProductScreen = () => {
             })}
         </InfiniteScroll>
       </>
-
     </div>
   );
 };

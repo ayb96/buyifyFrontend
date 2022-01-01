@@ -4,11 +4,11 @@ export default function LoadingBox() {
   return (
     <div className="loading">
       <i className="fa fa-spinner fa-spin loading-style"></i>{" "}
-      <p
+      {/* <p
       className="loading-style-loading"
       >
         Loading...
-      </p>
+      </p> */}
     </div>
   );
 }

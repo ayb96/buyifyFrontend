@@ -677,7 +677,7 @@ img.large {
 
 .payment-container .payment-sub {
   padding-top: 70px;
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 
@@ -896,6 +896,9 @@ img.large {
   .cartIcon {
     position: absolute;
     left: 10px;
+  }
+  .cart-sub-1 {
+    margin-right: 10px;
   }
   .dropdown {
     margin-left: 45px;

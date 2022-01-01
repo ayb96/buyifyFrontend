@@ -5,10 +5,11 @@ import { useNavigate } from "react-router";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Rate from "./Rate";
 import { URL } from "../../apis/BackendConfig";
+import LoadingBox from "./LoadingBox";
 
 const MainContent = () => {
   const { allSearch } = useSelector((state) => state.InfiniteScrollPrduct);
-
+  const [loading, setloading] = useState(true);
   const [hasMore, sethasMore] = useState(true);
   const [items, setItems] = useState([]);
   const [page, setpage] = useState(2);
@@ -22,6 +23,7 @@ const MainContent = () => {
       const data = await res.json();
 
       setItems(data.results);
+      setloading(false);
     };
     getArticles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -29,7 +31,6 @@ const MainContent = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      
       const res = await fetch(
         `${URL}/api/product?page=1&limit=20&allsearch=${allSearch}`
       );
@@ -81,6 +82,11 @@ const MainContent = () => {
             </div>
           }
         >
+          {loading && (
+            <div style={{ width: "80px" }}>
+              <LoadingBox />
+            </div>
+          )}
           {items &&
             items.map((product) => {
               return (
@@ -90,12 +96,11 @@ const MainContent = () => {
                   onClick={() => {
                     navigate(`/product/${product._id}`);
                   }}
-                  
                 >
-                  <div className="card_img" >
+                  <div className="card_img">
                     <img src={product.image} alt={product.name} />
                   </div>
-                  <div className="card_header" >
+                  <div className="card_header">
                     <h2>{product.name}</h2>
 
                     <Rate
@@ -111,7 +116,6 @@ const MainContent = () => {
             })}
         </InfiniteScroll>
       </>
-
     </div>
   );
 };

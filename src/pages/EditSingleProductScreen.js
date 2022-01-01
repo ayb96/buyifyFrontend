@@ -56,7 +56,7 @@ export default function EditSingleProductScreen(props) {
       ) : (
         <div className="row-flix top singleproductmargin">
           <div className="image-box">
-            <button className="primary hover-edit-product">Edit</button>
+            
             <img
               className="product-image"
               src={product.image}
