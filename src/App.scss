@@ -457,50 +457,6 @@ img.large {
 .form h1 {
   color: $bg;
 }
-// .form label {
-//   margin: 1rem 0;
-// }
-
-// .signin-container {
-//   height: 80vh;
-//   display: flex;
-//   justify-content: center;
-
-//   background-color: $bg;
-//   .signin-subcontainer {
-//     box-shadow: #ff8000 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-//     width: 40%;
-//     border-radius: 10px;
-//     margin-top: 2rem;
-//     margin-bottom: 2rem;
-//     border: 2px solid white;
-
-//     h1 {
-//       color: #fff;
-//       padding-top: 30px;
-//     }
-//   }
-// }
-
-// .register-container {
-//   height: 100vh;
-//   background-color: $bg;
-//   display: flex;
-//   justify-content: center;
-
-//   .registration-subcontainer {
-//     box-shadow: #ff8000 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-//     border: 2px solid white;
-//     width: 40%;
-//     border-radius: 10px;
-//     margin-top: 2rem;
-//     margin-bottom: 2rem;
-//   }
-//   h1 {
-//     color: #fff;
-//     padding-top: 30px;
-//   }
-// }
 
 .Newuser {
   color: #f07008;
@@ -535,27 +491,22 @@ img.large {
   padding-left: 20px;
   padding-right: 20px;
   align-self: center;
-  width: 390px;
+  width: 450px;
   border: 2px solid white;
   box-shadow: rgba(245, 236, 236, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .image-box {
-  position: relative;
-  border: 2px solid white;
-  box-shadow: rgba(245, 236, 236, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 500px;
   border-radius: 10px;
   .product-image {
-    width: 28rem;
-    height: 28rem;
-    flex: 0.4;
-    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
-.image-box img:hover {
-  background-color: $cta;
-}
+// .image-box img:hover {
+//   background-color: $cta;
+// }
 .hover-edit-product {
   position: absolute;
   bottom: 40px;
@@ -759,21 +710,6 @@ img.large {
   color: #20a020;
   background-color: #eeffe0;
 }
-// .user-profile {
-//   padding-bottom: 20px;
-//   background-color: $bg;
-
-//   h1 {
-//     color: white;
-//   }
-//   label {
-//     color: white;
-//   }
-//   div {
-//     margin-left: 20rem;
-//     margin-right: 20rem;
-//   }
-// }
 
 .error-box {
   height: 100vh;
@@ -808,21 +744,21 @@ img.large {
     width: 18rem;
     height: 10rem;
   }
-  .image-box {
-    .product-image {
-      width: 14rem;
-      height: 14rem;
-    }
-  }
+  // .image-box {
+  //   .product-image {
+  //     width: 14rem;
+  //     height: 14rem;
+  //   }
+  // }
 }
 @media (max-width: 434px) {
-  .image-box {
-    margin-bottom: 20px;
-    .product-image {
-      width: 15rem;
-      height: 15rem;
-    }
-  }
+  // .image-box {
+  //   margin-bottom: 20px;
+  //   .product-image {
+  //     width: 15rem;
+  //     height: 15rem;
+  //   }
+  // }
 
   .cartIcon {
     position: absolute;
@@ -858,6 +794,15 @@ img.large {
     .order-screen-box-2 {
       margin-left: 20px;
     }
+  }
+  .image-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .detail-price {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
