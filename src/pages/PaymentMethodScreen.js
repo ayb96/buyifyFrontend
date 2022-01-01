@@ -12,7 +12,7 @@ export default function PaymentMethodScreen() {
   const { shippingAddress } = useSelector((state) => state.cart);
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
 
-  console.log("shippinaddress:", shippingAddress);
+  
   useEffect(() => {
     if (!shippingAddress.address) {
       navigate("/signin/shipping");

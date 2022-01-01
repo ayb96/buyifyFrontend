@@ -26,7 +26,7 @@ export default function EditSingleProductScreen(props) {
   const handelInput = (e) => {
     e.persist();
     setInputValue({ ...inputValue, [e.target.name]: e.target.value });
-    console.log(inputValue);
+
   };
   const { name, price, description } = inputValue;
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function EditSingleProductScreen(props) {
   }, [productId.id, dispatch]);
 
   const handelEditTitle = () => {
-    console.log("test 1111111");
+
     dispatch(updateProduct({ productId: product._id, name }));
     setEditTitle(false);
   };

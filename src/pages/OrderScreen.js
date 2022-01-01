@@ -25,7 +25,7 @@ export default function OrderScreen(props) {
   useEffect(() => {
     const addPayPalScript = async () => {
       const { data } = await urlAxios.get("/api/config/paypal");
-      console.log("treeerere", data);
+      
       const script = document.createElement("script");
       script.type = "text/javascript";
       script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;
@@ -62,7 +62,7 @@ export default function OrderScreen(props) {
   ) : (
     <div className="order-screen-container">
       <div className="order-id">
-        <h1>Order {order._id}</h1>
+        <h1>Order {order._id.slice(10)}</h1>
       </div>
 
       <div className="row top">

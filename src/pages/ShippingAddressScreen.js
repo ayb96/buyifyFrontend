@@ -7,7 +7,7 @@ import { saveShippingAddress } from "../redux/actions/cartAction";
 export default function ShippingAddressScreen() {
   const { userInfo } = useSelector((state) => state.userSignin);
   const { shippingAddress } = useSelector((state) => state.cart);
-  console.log(shippingAddress);
+
   const [inputValue, setInputValue] = useState({
     fullName: shippingAddress.fullName,
     address: shippingAddress.address,

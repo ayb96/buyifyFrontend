@@ -63,7 +63,7 @@ $white: #fff;
     margin-bottom: 50px;
 
     .card_img {
-      margin-top: -4vw;
+      margin-top: -5vw;
 
       img {
         width: 200px;
@@ -76,8 +76,9 @@ $white: #fff;
       @extend .dFlex;
       flex-direction: column;
       color: $white;
+      height: 165px;
+      margin-bottom: 15px;
 
-      margin: 25px 0;
       h2 {
         font-size: 18px;
       }
@@ -822,7 +823,8 @@ img.large {
       height: 15rem;
     }
   }
-  .cartIcon{
+
+  .cartIcon {
     position: absolute;
     left: 10px;
   }
@@ -840,6 +842,22 @@ img.large {
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100px;
+  }
+}
+@media (max-width: 812px) {
+  .cart-sub-2,
+  .cart-sub-1 {
+    margin-left: 10px;
+  }
+  .placed-order-container {
+    .orderdata {
+      margin-left: 20px;
+    }
+  }
+  .order-screen-container {
+    .order-screen-box-2 {
+      margin-left: 20px;
+    }
   }
 }
 

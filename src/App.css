@@ -73,7 +73,7 @@
 }
 
 .main_content .card .card_img {
-  margin-top: -4vw;
+  margin-top: -5vw;
 }
 
 .main_content .card .card_img img {
@@ -88,7 +88,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   color: #fff;
-  margin: 25px 0;
+  height: 165px;
+  margin-bottom: 15px;
 }
 
 .main_content .card .card_header h2 {
@@ -934,6 +935,19 @@ img.large {
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100px;
+  }
+}
+
+@media (max-width: 812px) {
+  .cart-sub-2,
+  .cart-sub-1 {
+    margin-left: 10px;
+  }
+  .placed-order-container .orderdata {
+    margin-left: 20px;
+  }
+  .order-screen-container .order-screen-box-2 {
+    margin-left: 20px;
   }
 }
 

@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 
 export default function CartScreen(props) {
-  // console.log("props", props);
+
   const { userInfo } = useSelector((state) => state.userSignin);
-  // console.log("window:", window);
+
   const { productId, qty } = useParams();
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ export default function CartScreen(props) {
       navigate("/signin/shipping");
     }
   };
-  console.log("casdaavdvdavsdvsdvsdvsdvsdv", cartItems);
+  
   return (
     <>
       <div className="row top cart-container">
@@ -86,14 +86,7 @@ export default function CartScreen(props) {
               <li>
                 <h2 className="subtotal-cart">
                   Subtotal 
-                  {/* (
-                  {cartItems.reduce((prev, current) => {
-                    console.log("prev", prev);
-                    console.log("current", current);
-                    return prev + current.qty;
-                  }, 0)}
-                
-                  items) :  */}
+                  
                   : 
                   ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
                 </h2>

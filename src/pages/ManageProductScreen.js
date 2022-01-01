@@ -38,7 +38,7 @@ const ManageProductScreen = () => {
         `${URL}/api/product?page=1&limit=20&allsearch=${allSearch}`
       );
       const data = await res.json();
-      // console.log(data.results);
+    
       setItems(data.results);
     };
     getArticles();

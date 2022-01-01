@@ -90,11 +90,12 @@ const MainContent = () => {
                   onClick={() => {
                     navigate(`/product/${product._id}`);
                   }}
+                  
                 >
-                  <div className="card_img">
+                  <div className="card_img" >
                     <img src={product.image} alt={product.name} />
                   </div>
-                  <div className="card_header">
+                  <div className="card_header" >
                     <h2>{product.name}</h2>
 
                     <Rate
