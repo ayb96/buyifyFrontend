@@ -6,24 +6,22 @@ import MessageBox from "../component/HomePageComponent/ErrorBox";
 import { useNavigate } from "react-router";
 
 export default function OrderHistoryScreen() {
-
   const navigate = useNavigate();
   const orderMineList = useSelector((state) => state.orderMineList);
   const { userInfo } = useSelector((state) => state.userSignin);
   const { loading, error, orders } = orderMineList;
   const dispatch = useDispatch();
   useEffect(() => {
-
     dispatch(listOrderMine(userInfo));
-
   }, [dispatch, userInfo]);
-
 
   return (
     <div className="order-history">
       <h1>Order History</h1>
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <div style={{color:"black"}}>
+          <LoadingBox></LoadingBox>
+        </div>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
@@ -67,7 +65,6 @@ export default function OrderHistoryScreen() {
           </tbody>
         </table>
       )}
-
     </div>
   );
 }
