@@ -54,7 +54,7 @@ export const Header = () => {
               )}
             </Link>
           </div>
-          <>
+          <div className="username-box">
             {userInfo ? (
               <div className="dropdown">
                 <Link to="">
@@ -100,7 +100,7 @@ export const Header = () => {
                 </Link>
               </div>
             )}
-          </>
+          </div>
         </div>
       </header>
     </div>

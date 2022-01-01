@@ -504,9 +504,6 @@ img.large {
 .Newuser {
   color: #f07008;
 }
-.Newusers {
-  color: #ffffff;
-}
 
 .singleproductmargin {
   background-color: $bg;
@@ -817,7 +814,7 @@ img.large {
     }
   }
 }
-@media (max-width: 570px) {
+@media (max-width: 434px) {
   .image-box {
     margin-bottom: 20px;
     .product-image {
@@ -830,6 +827,15 @@ img.large {
   }
   .footer {
     justify-content: center;
+  }
+  .username-box {
+    position: absolute;
+    right: 5px;
+  }
+  .testIconz {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100px;
   }
 }
 
@@ -1074,7 +1080,6 @@ img.large {
 .manage-addprofile-container,
 .signin-container,
 .register-container {
-  border: 3px solid $bg;
   max-width: 500px;
   margin: auto;
   margin-top: 20px;

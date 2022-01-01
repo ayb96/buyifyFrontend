@@ -568,10 +568,6 @@ img.large {
   color: #f07008;
 }
 
-.Newusers {
-  color: #ffffff;
-}
-
 .singleproductmargin {
   background-color: #272b34;
   padding-top: 40px;
@@ -910,7 +906,7 @@ img.large {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 434px) {
   .image-box {
     margin-bottom: 20px;
   }
@@ -925,6 +921,15 @@ img.large {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .username-box {
+    position: absolute;
+    right: 5px;
+  }
+  .testIconz {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100px;
   }
 }
 
@@ -1213,7 +1218,6 @@ img.large {
 .manage-addprofile-container,
 .signin-container,
 .register-container {
-  border: 3px solid #272b34;
   max-width: 500px;
   margin: auto;
   margin-top: 20px;
