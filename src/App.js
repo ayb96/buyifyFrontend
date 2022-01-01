@@ -21,6 +21,8 @@ import EditWebsiteInfo from "./pages/EditWebsiteInfo";
 import AddProductScreen from "./pages/AddProductScreen";
 import ProtectedRoute from "./component/ProtectedRoute";
 import NavBar from "./component/HomePageComponent/NavBar";
+
+
 //import image from "./picture/shop.jpeg";
 function App() {
   return (

@@ -1010,22 +1010,9 @@ img.large {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 70vh;
-}
-
-.order-history .table-fix {
-  width: 60rem;
-}
-
-.order-history .table-fix tr {
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navibar-com {
@@ -1240,5 +1227,63 @@ img.large {
   margin-bottom: 10px;
   background-color: #fe8033;
   color: white;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  .order-history {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+  tr:nth-child(odd) {
+    background: #2d343e;
+    color: white;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before {
+    content: "ID";
+  }
+  td:nth-of-type(2):before {
+    content: "DATE";
+  }
+  td:nth-of-type(3):before {
+    content: "TOTAL";
+  }
+  td:nth-of-type(4):before {
+    content: "PAID";
+  }
+  td:nth-of-type(5):before {
+    content: "DELIVERED";
+  }
+  td:nth-of-type(6):before {
+    content: "ACTIONS";
+  }
 }
 /*# sourceMappingURL=App.css.map */

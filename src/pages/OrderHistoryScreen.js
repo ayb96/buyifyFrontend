@@ -16,55 +16,61 @@ export default function OrderHistoryScreen() {
   }, [dispatch, userInfo]);
 
   return (
-    <div className="order-history">
-      <h1>Order History</h1>
-      {loading ? (
-        <div style={{color:"black"}}>
-          <LoadingBox></LoadingBox>
-        </div>
-      ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
-      ) : (
-        <table className="table table-fix">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
-              <th>ACTIONS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {orders.results &&
-              orders.results.map((order) => (
-                <tr key={order._id}>
-                  <td>{order._id}</td>
-                  <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>{order.totalPrice.toFixed(2)}</td>
-                  <td>{order.isPaid ? order.paidAt.substring(0, 10) : "No"}</td>
-                  <td>
-                    {order.isDelivered
-                      ? order.deliveredAt.substring(0, 10)
-                      : "No"}
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      className="small"
-                      onClick={() => {
-                        navigate(`/order/${order._id}`);
-                      }}
-                    >
-                      Details
-                    </button>
-                  </td>
+    <>
+      <div className="order-history">
+        <div>
+          <h1>Order History</h1>
+          {loading ? (
+            <div style={{ color: "black" }}>
+              <LoadingBox></LoadingBox>
+            </div>
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            <table role="table">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th>ID</th>
+                  <th>DATE</th>
+                  <th>TOTAL</th>
+                  <th>PAID</th>
+                  <th>DELIVERED</th>
+                  <th>ACTIONS</th>
                 </tr>
-              ))}
-          </tbody>
-        </table>
-      )}
-    </div>
+              </thead>
+              <tbody role="rowgroup">
+                {orders.results &&
+                  orders.results.map((order) => (
+                    <tr key={order._id}>
+                      <td role="cell">{order._id.slice(0, 19)}</td>
+                      <td role="cell">{order.createdAt.substring(0, 10)}</td>
+                      <td role="cell">{order.totalPrice.toFixed(2)}</td>
+                      <td role="cell">
+                        {order.isPaid ? order.paidAt.substring(0, 10) : "No"}
+                      </td>
+                      <td role="cell">
+                        {order.isDelivered
+                          ? order.deliveredAt.substring(0, 10)
+                          : "No"}
+                      </td>
+                      <td role="cell">
+                        <button
+                          type="button"
+                          className="small"
+                          onClick={() => {
+                            navigate(`/order/${order._id}`);
+                          }}
+                        >
+                          Details
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
+    </>
   );
 }
