@@ -822,6 +822,10 @@ img.large {
       height: 15rem;
     }
   }
+  .cartIcon{
+    position: absolute;
+    left: 10px;
+  }
   .dropdown {
     margin-left: 45px;
   }
@@ -830,7 +834,7 @@ img.large {
   }
   .username-box {
     position: absolute;
-    right: 5px;
+    right: 10px;
   }
   .testIconz {
     margin-bottom: 10px;
