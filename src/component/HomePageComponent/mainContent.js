@@ -83,7 +83,7 @@ const MainContent = () => {
           }
         >
           {loading && (
-            <div style={{ width: "80px" }}>
+            <div style={{ padding:"40px"}}>
               <LoadingBox />
             </div>
           )}

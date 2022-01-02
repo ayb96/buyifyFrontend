@@ -20,7 +20,7 @@ export const Header = () => {
     <div className="header-all-container">
       <header className="row">
         <div className="brand">
-          {/* <AppNav /> */}
+         
           <Link to="/">
             <p>Buyify</p>
           </Link>
