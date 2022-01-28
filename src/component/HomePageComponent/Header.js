@@ -20,9 +20,8 @@ export const Header = () => {
     <div className="header-all-container">
       <header className="row">
         <div className="brand">
-         
           <Link to="/">
-            <p>Buyify</p>
+            <p contentEditable="true">Buyify</p>
           </Link>
         </div>
         <div className="search">
