@@ -16,12 +16,12 @@ export default function HomeScreen() {
       {!allSearch && (
         <>
           <ProductSlider />
-          {userInfo && (
+          {/* {userInfo && (
             <>
               <Title title="Recommended for you" />
               <Recommendation />
             </>
-          )}
+          )} */}
           <Title title="Our Category" />
           <ProductCategory />
         </>
