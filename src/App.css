@@ -881,7 +881,7 @@ img.large {
   height: 80%;
 }
 
-@media (max-width: 692px) {
+@media (max-width: 959px) {
   .footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
