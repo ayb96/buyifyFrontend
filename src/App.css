@@ -609,12 +609,11 @@ img.large {
 
 .image-box {
   width: 500px;
-  max-height: 500px;
 }
 
 .image-box img {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 .hover-edit-product {
